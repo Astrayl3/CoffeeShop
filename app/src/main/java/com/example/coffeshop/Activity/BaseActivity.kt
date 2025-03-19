@@ -1,13 +1,8 @@
-package com.example.coffeshop
+package com.example.coffeshop.Activity
 
 import android.os.Bundle
 import android.view.WindowManager
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.google.firebase.database.collection.LLRBNode.Color
-import com.google.firebase.firestore.core.View
 
 open class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

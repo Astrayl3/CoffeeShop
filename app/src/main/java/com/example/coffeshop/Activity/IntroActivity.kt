@@ -1,14 +1,10 @@
-package com.example.coffeshop
+package com.example.coffeshop.Activity
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import kotlinx.coroutines.time.delay
+import com.example.coffeshop.R
 
 class IntroActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +14,6 @@ class IntroActivity : BaseActivity() {
 
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, MainActivity::class.java))
-        }, 1000)
+        }, 3000)
     }
 }

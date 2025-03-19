@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">CoffeShop</string>
-    <string name="find_the_best_coffe_for_you_n">Find the best Coffe for you\n</string>
-    <string name="ayame_s_coffe_menu">Ayame\'s Coffe Menu</string>
+    <string name="find_the_best_coffee_for_you_n">Find the best Coffee for you\n</string>
+    <string name="ayame_s_coffee_menu">Ayame\'s Coffee Menu</string>
 </resources>

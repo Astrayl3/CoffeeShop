@@ -6,41 +6,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".IntroActivity">
+    tools:context=".Activity.IntroActivity">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="496dp"
         android:layout_height="806dp"
         android:scaleType="centerCrop"
+        app:srcCompat="@drawable/cfbackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cfBackground" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
-        android:text="@string/find_the_best_coffe_for_you_n"
+        android:layout_marginBottom="184dp"
+        android:text="@string/find_the_best_coffee_for_you_n"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="34.5sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="68dp"
         android:fontFamily="cursive"
-        android:text="AyameX's Coffe"
+        android:text="AyameX's Coffee"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="80sp"

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.CoffeShop" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.CoffeShop"  parent="Theme.AppCompat.Light.DarkActionBar" />
+    <style name="CircleImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
 </resources>

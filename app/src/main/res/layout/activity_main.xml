@@ -6,15 +6,17 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:background="@color/black"
-    tools:context=".MainActivity">
+    tools:context=".Activity.MainActivity">
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/cfMenuBackground"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:srcCompat="@drawable/cfmenubackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <TextView
         android:id="@+id/textView3"
@@ -22,11 +24,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:fontFamily="cursive"
-        android:text="@string/ayame_s_coffe_menu"
+        android:text="@string/ayame_s_coffee_menu"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textColorHighlight="@color/black"
-        android:textSize="58sp"
+        android:textSize="65sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +53,7 @@
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_gravity="center"
                 android:layout_margin="50dp"
                 android:text="Select Category"
@@ -64,6 +66,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:id="@+id/btn1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
@@ -76,13 +79,13 @@
                         android:id="@+id/CoffeIcon"
                         android:layout_width="163dp"
                         android:layout_height="139dp"
-                        app:srcCompat="@drawable/coffeicon" />
+                        app:srcCompat="@drawable/coffeeicon" />
 
                     <TextView
-                        android:id="@+id/Coffe"
+                        android:id="@+id/Coffee"
                         android:layout_width="166dp"
                         android:layout_height="wrap_content"
-                        android:text="Coffe"
+                        android:text="Coffee"
                         android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textColorHighlight="@color/black"
@@ -91,6 +94,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/btn2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
