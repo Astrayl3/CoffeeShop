@@ -10,24 +10,26 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/cfmenubackground"
+        android:layout_width="580dp"
+        android:layout_height="874dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintVertical_bias="0.92"
+        app:srcCompat="@drawable/cfmenubackground" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="108dp"
         android:fontFamily="cursive"
         android:text="@string/ayame_s_coffee_menu"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textColorHighlight="@color/black"
+        android:textStyle="bold"
         android:textSize="65sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
         app:layout_constraintHorizontal_bias="0.0"
@@ -47,16 +49,17 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="500dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
-                android:layout_height="70dp"
+                android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:layout_margin="50dp"
                 android:text="Select Category"
+                android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="40dp" />
 
