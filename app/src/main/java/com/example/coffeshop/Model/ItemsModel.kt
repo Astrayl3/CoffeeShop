@@ -1,27 +1,26 @@
 package com.example.coffeshop.Model
 
-
 import android.os.Parcel
 import android.os.Parcelable
 
 data class ItemsModel(
-    var title:String = "",
-    var description:String = "",
-    var picUrl:ArrayList<String> = ArrayList(),
-    var price:Double = 0.0,
-    var extra:String = "",
-    var categoryID:String = ""
-):Parcelable {
-    constructor(parcel: Parcel):this(
+    var title: String = "",
+    var description: String = "",
+    var picUrl: ArrayList<String> = ArrayList(),
+    var price: Double = 0.0,
+    var extra: String = "",
+    var categoryID: String = ""
+) : Parcelable {
+    constructor(parcel: Parcel) : this(
         parcel.readString().toString(),
         parcel.readString().toString(),
-        parcel.createStringArray() as ArrayList<String>,
+        parcel.createStringArray()?.toCollection(ArrayList()) ?: ArrayList(),
         parcel.readDouble(),
         parcel.readString().toString(),
         parcel.readString().toString()
     )
 
-    override fun writeToParcel(parcel: Parcel, flags: Int){
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(title)
         parcel.writeString(description)
         parcel.writeStringList(picUrl)
@@ -43,5 +42,4 @@ data class ItemsModel(
             return arrayOfNulls(size)
         }
     }
-
 }

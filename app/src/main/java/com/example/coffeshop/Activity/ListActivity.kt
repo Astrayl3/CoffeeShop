@@ -3,6 +3,7 @@
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,46 +15,47 @@ import com.example.coffeshop.databinding.ActivityListBinding
  class ListActivity : BaseActivity() {
 
      private val viewModel = MainViewModel()
-     private lateinit var bindding: ActivityListBinding
+     private lateinit var binding: ActivityListBinding
      private lateinit var context: Context
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bindding = ActivityListBinding.inflate(layoutInflater)
+        binding = ActivityListBinding.inflate(layoutInflater)
         context = this@ListActivity
-        setContentView(bindding.root)
+        setContentView(binding.root)
 
-        bindding.menubtn.setOnClickListener{
+        binding.menubtn.setOnClickListener{
             startActivity(
                 Intent(this@ListActivity, MainActivity::class.java)
             )
         }
-        bindding.titletxt.text = intent.getStringExtra("title")
+        binding.titletxt.text = intent.getStringExtra("title")
         val i = intent.getIntExtra("id", 0)
         when(i){
-            1 -> bindding.catImg.setImageDrawable(
+            1 -> binding.catImg.setImageDrawable(
                 ContextCompat.getDrawable(
                     context, R.drawable.coffeeicon
                 )
             )
-            2 -> bindding.catImg.setImageDrawable(
+            2 -> binding.catImg.setImageDrawable(
                 ContextCompat.getDrawable(
                     context, R.drawable.cakeicon
                 )
             )
         }
-        bindding.progressBar.visibility = View.VISIBLE
-        viewModel.loadFiltered(i).observe(this){ item ->
-            if (item.isEmpty()){
-                bindding.emptytxt.visibility = View.VISIBLE
-            }else{
-                bindding.emptytxt.visibility = View.GONE
-                bindding.view.layoutManager = LinearLayoutManager(
-                    this@ListActivity,
-                    LinearLayoutManager.VERTICAL,
-                    false)
-                bindding.view.adapter = ListItemAdapter(item)
-                bindding.progressBar.visibility = View.GONE
+        binding.progressBar.visibility = View.VISIBLE
+        viewModel.loadFiltered(i).observe(this) { item ->
+            Log.d("RecyclerViewCheck", "Total items received from ViewModel: ${item.size}")
+
+            if (item.isEmpty()) {
+                binding.emptytxt.visibility = View.VISIBLE
+            } else {
+                binding.emptytxt.visibility = View.GONE
+                binding.view.layoutManager = LinearLayoutManager(
+                    this@ListActivity, LinearLayoutManager.VERTICAL, false
+                )
+                binding.view.adapter = ListItemAdapter(item)
+                binding.progressBar.visibility = View.GONE
             }
         }
     }

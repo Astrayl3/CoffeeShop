@@ -54,6 +54,10 @@ dependencies {
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-firestore")
     implementation ("com.github.bumptech.glide:glide:4.16.0")
+    implementation(libs.firebase.database)
+    implementation(libs.androidx.media3.common.ktx)
+    implementation(libs.firebase.crashlytics.buildtools)
+    implementation(libs.cronet.embedded)
     kapt ("com.github.bumptech.glide:compiler:4.16.0")
 
     implementation(libs.androidx.core.ktx)
